@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+   <h:head>
+   		<title>Employee Info</title>
+   </h:head>
+   <h:body>
+   		<h:form>
+   			<h:outputLabel for="empName">
+   				<h:outputText value="Enter Employee name: " />
+   			</h:outputLabel>
+   			<h:inputText id="name" value="#{emp.employeeName}" />
+   		
+   			<br/>
+   		
+   			<h:outputLabel for="designation">
+   				<h:outputText value="Enter Employee designation: " />
+   			</h:outputLabel>
+   			<h:inputText id="designation" value="#{emp.designation}" />
+   		
+   			<br/>
+   		
+   			<h:outputLabel for="salary">
+   				<h:outputText value="Enter Employee salary" />
+   			</h:outputLabel>
+   			<h:inputText id="salary" value="#{emp.salary}" />
+   		
+   			<br/>
+   			
+   			<h:commandButton id="insert" value="Add data" action="#{emp.addEmployee()}" />
+   		</h:form>
+   </h:body>
+   
+</html>
