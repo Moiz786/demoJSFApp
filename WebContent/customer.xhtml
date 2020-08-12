@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+   <h:head>
+   		<title>Customer Info</title>
+   </h:head>
+   <h:body>
+   		<h:form>
+   			<h:outputLabel for="cfName">
+   				<h:outputText value="Enter Customer first name: " />
+   			</h:outputLabel>
+   			<h:inputText id="fname" value="#{customer.firstName}" />
+   		
+   			<br/>
+   		
+   			<h:outputLabel for="clName">
+   				<h:outputText value="Enter Customer last name: " />
+   			</h:outputLabel>
+   			<h:inputText id="lname" value="#{customer.lastName}" />
+   		
+   			<br/>
+   		
+   			
+			<h:outputLabel for="cCode">
+   				<h:outputText value="Enter Customer code:" />
+   			</h:outputLabel>
+   			<h:inputText id="custCode" value="#{customer.customerCode}" />
+   		
+   			<br/>
+   			
+   			<h:outputLabel for="cBankName">
+   				<h:outputText value="Enter Bank Name:" />
+   			</h:outputLabel>
+   			<h:inputText id="cBName" value="#{customer.bankdetails.name}" />
+   		
+   			<br/>
+   			
+   			<h:outputLabel for="cBankBCode">
+   				<h:outputText value="Enter Branch code:" />
+   			</h:outputLabel>
+   			<h:inputText id="cBCode" value="#{customer.bankdetails.branchCode}" />
+   		
+   			<br/>
+   			
+   			<h:outputLabel for="cAccount">
+   				<h:outputText value="Enter Customer Account No:" />
+   			</h:outputLabel>
+   			<h:inputText id="cAccount" value="#{customer.accountNo}" />
+   		
+   			<br/>
+   			
+   			<h:commandButton id="insert" value="Add data" action="#{customer.add}" />
+   		</h:form>
+   </h:body>
+   
+</html>
