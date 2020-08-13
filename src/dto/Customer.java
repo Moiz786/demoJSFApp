@@ -1,5 +1,6 @@
 package dto;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name="customer")
@@ -39,6 +40,12 @@ public class Customer {
 	public void setAccountNo(String accountNo) {
 		this.accountNo = accountNo;
 	}
+	
+	@PostConstruct
+	public void init() {
+	    bankdetails = new Bank();
+	}
+
 	
 	public String add(){
 		return "results";
