@@ -9,7 +9,7 @@ public class Customer {
 	private String lastName;
 	private int customerCode;
 	private Bank bankdetails;
-	private String accountNo;
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -34,13 +34,6 @@ public class Customer {
 	public void setBankdetails(Bank bankdetails) {
 		this.bankdetails = bankdetails;
 	}
-	public String getAccountNo() {
-		return accountNo;
-	}
-	public void setAccountNo(String accountNo) {
-		this.accountNo = accountNo;
-	}
-	
 	@PostConstruct
 	public void init() {
 	    bankdetails = new Bank();

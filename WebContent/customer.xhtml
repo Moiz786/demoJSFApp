@@ -45,14 +45,20 @@
    		
    			<br/>
    			
-   			<h:outputLabel for="cAccount">
+   			<h:outputLabel for="cAccountNum">
    				<h:outputText value="Enter Customer Account No:" />
    			</h:outputLabel>
-   			<h:inputText id="cAccount" value="#{customer.accountNo}" />
+   			<h:inputText id="cAccountNo" value="#{customer.bankdetails.accountInfo.accountNum}" />
+   		
+   			<br/>
+   			<h:outputLabel for="cAccountBal">
+   				<h:outputText value="Enter Customer Account No:" />
+   			</h:outputLabel>
+   			<h:inputText id="cAccountBal" value="#{customer.bankdetails.accountInfo.amount}" />
    		
    			<br/>
    			
-   			<h:commandButton id="insert" value="Add data" action="#{customer.add}" />
+   			<h:commandButton id="insert" value="Add data" action="addResult" />
    		</h:form>
    </h:body>
    

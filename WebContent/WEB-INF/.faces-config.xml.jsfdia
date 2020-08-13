@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PROCESS model-entity="JSFProcess">
- <PROCESS-ITEM NAME="rules:index.xhtml" PATH="index.xhtml"
+ <PROCESS-ITEM NAME="rules:customer.xhtml" PATH="customer.xhtml"
   SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules:index.xhtml:0" NAME="item" PATH="index.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="search::results.xhtml" NAME="output"
-    PATH="results.xhtml" TARGET="rules:results.xhtml" TITLE="search" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="noresults::noresults.xhtml" NAME="output1"
-    PATH="noresults.xhtml" TARGET="rules:noresults.xhtml"
+  <PROCESS-ITEM ID="rules:customer.xhtml:0" NAME="item"
+   PATH="customer.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="addResult::addResults.xhtml" NAME="output"
+    PATH="addResults.xhtml" TARGET="rules:addResults.xhtml"
+    TITLE="addResult" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="noresults::noResults.xhtml" NAME="output1"
+    PATH="noResults.xhtml" TARGET="rules:noResults.xhtml"
     TITLE="noresults" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:results.xhtml" PATH="results.xhtml"
+ <PROCESS-ITEM NAME="rules:addResults.xhtml" PATH="addResults.xhtml"
   SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:noresults.xhtml" PATH="noresults.xhtml"
+ <PROCESS-ITEM NAME="rules:noResults.xhtml" PATH="noResults.xhtml"
   SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
