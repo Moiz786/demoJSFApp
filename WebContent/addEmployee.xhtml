@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+   <h:head>
+  		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    	<title>Employee Info</title>
+   		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+   </h:head>
+   <h:body>
+   <div class="container-fluid">
+  		<div class="row-fluid">
+   		<center><h2>JSF Hibernate Crud Example</h2></center>
+   		<h3>1. New Employee Form</h3>
+    
+   		<h:form>
+   			<div class="form-group">
+                <h:outputLabel for="empName">
+   					<h:outputText value="Enter Employee name: " />
+   				</h:outputLabel>
+   				<div class="col-xs-10 col-md-2">
+                	<h:inputText class="form-control"  id="name" value="#{emp.employeeName}" />
+   				</div>
+   			</div>
+   			<div class="form-group">
+                <h:outputLabel for="designation">
+   					<h:outputText value="Enter Employee designation: " />
+   				</h:outputLabel>
+   				<div class="col-xs-10 col-md-2">
+                	<h:inputText class="form-control"  id="designation" value="#{emp.designation}" />
+   				</div>
+   			</div>
+   			<div class="form-group">
+                <h:outputLabel for="salary">
+   					<h:outputText value="Enter Employee salary" />
+   				</h:outputLabel>
+   				<div class="col-xs-10 col-md-2">
+                	<h:inputText class="form-control"  id="salary" value="#{emp.salary}" />
+   				</div>
+   			</div>
+   			<h:commandButton id="insert" class="btn btn-primary" value="Add data" action="#{empController.addEmployee()}" />
+   		</h:form>
+   		</div>
+   	</div>
+   </h:body>
+   
+</html>

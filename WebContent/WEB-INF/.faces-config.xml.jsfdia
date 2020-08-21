@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:employee.xhtml" PATH="employee.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:employee.xhtml:0" NAME="item"
+   PATH="employee.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="addEmployee::success.xhtml" NAME="output"
+    PATH="success.xhtml" TARGET="rules:success.xhtml"
+    TITLE="addEmployee" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="noResult::noResult.xhtml" NAME="output1"
+    PATH="noResult.xhtml" TARGET="rules:noResult.xhtml" TITLE="noResult" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="eEmployee:#{empController.list}:employee.xhtml" NAME="output2"
+    PATH="employee.xhtml" TARGET="rules:employee.xhtml"
+    TITLE="#{empController.list}:eEmployee" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:noResult.xhtml" PATH="noResult.xhtml"
+  SHAPE="256,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:success.xhtml" PATH="success.xhtml"
+  SHAPE="272,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
