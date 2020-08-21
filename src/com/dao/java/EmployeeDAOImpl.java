@@ -44,10 +44,11 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 	@Override
 	public List<EmployeeDTO> fetch() {
 		// TODO Auto-generated method stub
-		Session session = HibernateUtil.buildSessionFactoryObj().openSession();
+		SessionFactory sf=HibernateUtil.buildSessionFactoryObj();
+		Session session = sf.openSession();
 		org.hibernate.Query query = session.createQuery("from EmployeeDTO");
 		List list = query.list();
-		//List<EmployeeDTO> employees = Collections.checkedList(list, EmployeeDTO.class);
+		List<EmployeeDTO> employees = Collections.checkedList(list, EmployeeDTO.class);
 		//List<EmployeeDTO> employees = HibernateUtil.buildSessionFactoryObj().getCurrentSession().createCriteria(EmployeeDTO.class).list();
 		return list;
 	}

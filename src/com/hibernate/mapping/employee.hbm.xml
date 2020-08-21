@@ -8,13 +8,13 @@
    <column name="empId"/>
    <generator class="increment"/>
   </id>
-  <property name="employeeName" type="java.lang.String">
+  <property name="employeeName" type="java.lang.String" not-null="false">
    <column name="empName"/>
   </property>
-  <property name="designation" type="java.lang.String">
+  <property name="designation" type="java.lang.String" not-null="true">
    <column name="designation"/>
   </property>
-  <property name="salary" type="java.lang.Double">
+  <property name="salary" type="java.lang.Double" not-null="false">
    <column name="salary"/>
   </property>
  </class>

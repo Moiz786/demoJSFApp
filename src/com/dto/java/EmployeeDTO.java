@@ -1,8 +1,10 @@
 package com.dto.java;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 
-@ManagedBean(name="emp")
+@ViewScoped
 public class EmployeeDTO {
 	private int employeeId;
 	private String employeeName;

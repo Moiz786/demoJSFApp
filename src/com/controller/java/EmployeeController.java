@@ -15,33 +15,36 @@ public class EmployeeController implements Serializable{
 	
 	private static EmployeeDTO emp1 = new EmployeeDTO();
 	
-	public static String addEmployee() throws Exception{
+	public static void addEmployee() throws Exception{
 		String returnPage = "employee";
 		IEmployeeDAO empDao = new EmployeeDAOImpl();
 		empDao.insert(emp1);
-		return returnPage;
+		//return returnPage;
 	}
 	
-	public static String editEmployee() throws Exception{
+	public static void editEmployee() throws Exception{
 		String returnPage = "employee";
 		IEmployeeDAO empDao = new EmployeeDAOImpl();
 		empDao.update(emp1);
-		return returnPage;
+		//return returnPage;
 	}
 	
-	public static String deleteEmployee() throws Exception{
+	public static void deleteEmployee() throws Exception{
 		String returnPage = "employee";
 		IEmployeeDAO empDao = new EmployeeDAOImpl();
 		empDao.delete(emp1);
-		return returnPage;
+		//return returnPage;
 	}
 	
-	public static String listEmployee() throws Exception{
+	public static List<EmployeeDTO> listEmployee() throws Exception{
 		String returnPage = "employee";
 		IEmployeeDAO empDao = new EmployeeDAOImpl();
 		List<EmployeeDTO> employeesList= empDao.fetch();
 		
-		return returnPage;
+		return employeesList;
 	}
+	
+
+	
 
 }

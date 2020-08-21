@@ -1,7 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+      
    <h:head>
   		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
     	<title>Employee Info</title>
@@ -11,22 +13,39 @@
 		<center><h2>JSF Hibernate Crud Example</h2></center>
    		<h3>List of Employee</h3>
     
-   		<h:dataTable var="em" value="#{empController.listEmployee()}" border="1" cellpadding="2" cellspacing="2">
+   		<h:dataTable var="employee" value="#{empController.listEmployee()}" border="1" cellpadding="2" cellspacing="2" >
    			<h:column>
    				<f:facet name="header">Employee Name</f:facet>
-   				<h:outputText value="#{emp.employeeName}" />
+   				<h:outputText value="#{employee.employeeName}" />
    			</h:column>
    		
    			<h:column>
    				<f:facet name="header">Designation</f:facet>
-   				<h:outputText value="#{emp.designation}" />
+   				<h:outputText value="#{employee.designation}" />
    			</h:column>
    		
    			<h:column>
    				<f:facet name="header">Salary</f:facet>
-   				<h:outputText value="#{emp.salary}" />
+   				<h:outputText value="#{employee.salary}" />
    			</h:column>
    		
+   			<h:column>
+   				<f:facet name="header"></f:facet>
+   				<h:commandButton id="edit" action="#{empController.editEmployee()}" value="Edit">
+   					<f:param name="action" value="#{employee.employeeId}"></f:param>
+   				</h:commandButton>
+   			
+   			</h:column>
+   			<h:column>
+   				<f:facet name="header"></f:facet>
+   				<h:commandButton id="delete" action="#{empController.deleteEmployee()}" value="Delete">
+   					<f:param name="action" value="#{employee.employeeId}"></f:param>
+   				</h:commandButton>
+   				
+   			</h:column>
+
    		</h:dataTable>
+   		
+   		<h:commandButton id="add" class="btn btn-primary" value="Add Employee" action="addEmployee" />
 	</h:body>
 </html>

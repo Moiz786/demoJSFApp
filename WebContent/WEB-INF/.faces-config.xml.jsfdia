@@ -4,19 +4,34 @@
   SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:employee.xhtml:0" NAME="item"
    PATH="employee.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="addEmployee::success.xhtml" NAME="output"
-    PATH="success.xhtml" TARGET="rules:success.xhtml"
-    TITLE="addEmployee" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addEmployee::addEmployee.xhtml"
+    NAME="output" PATH="addEmployee.xhtml"
+    TARGET="rules:addEmployee.xhtml" TITLE="addEmployee" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT ID="noResult::noResult.xhtml" NAME="output1"
     PATH="noResult.xhtml" TARGET="rules:noResult.xhtml" TITLE="noResult" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT
-    ID="eEmployee:#{empController.list}:employee.xhtml" NAME="output2"
+    ID=":#{empController.listEmployee}:employee.xhtml" NAME="output2"
     PATH="employee.xhtml" TARGET="rules:employee.xhtml"
-    TITLE="#{empController.list}:eEmployee" model-entity="JSFProcessItemOutput"/>
+    TITLE="#{empController.listEmployee}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{empController.addEmployee}:employee.xhtml" NAME="output3"
+    PATH="employee.xhtml" TARGET="rules:employee.xhtml"
+    TITLE="#{empController.addEmployee}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{empController.editEmployee}:editEmployee.xhtml"
+    NAME="output4" PATH="editEmployee.xhtml"
+    TARGET="rules:editEmployee.xhtml"
+    TITLE="#{empController.editEmployee}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{empController.deleteEmployee}:employee.xhtml" NAME="output5"
+    PATH="employee.xhtml" TARGET="rules:employee.xhtml"
+    TITLE="#{empController.deleteEmployee}:[any]" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:noResult.xhtml" PATH="noResult.xhtml"
   SHAPE="256,145,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:success.xhtml" PATH="success.xhtml"
+ <PROCESS-ITEM NAME="rules:addEmployee.xhtml" PATH="addEmployee.xhtml"
   SHAPE="272,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:editEmployee.xhtml" PATH="editEmployee.xhtml"
+  SHAPE="320,385,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
